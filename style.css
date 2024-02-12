@@ -70,6 +70,11 @@ body {
     }
   }
 }
+@media only screen and (max-width: 400px) {
+  .header {
+    height: calc(28vh - 4rem); /* Adjusted height for phone screens */
+  }
+}
 
 #noButton {
   position: absolute;
