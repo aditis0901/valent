@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Yayyy ! Finally🤧</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="ghosty-azi.gif"
+          style="height: 300px; width: 390px; object-fit: none;"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <button class="btn" id="yesButton" onclick="openPopup()">
+        Let's Fix a Date
+      </button>
+
+
+      <div id="myPopup" class="popup">
+        <!-- Popup content -->
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <p> Call me if you miss me <br> NOW! </p>
+        </div>
+      </div>
+      
+      <script>
+      // Function to open the popup
+      function openPopup() {
+          document.getElementById("myPopup").style.display = "block";
+          setTimeout(function() {
+              document.getElementById("myPopup").style.opacity = "1";
+          }, 10); // Delay to allow display property to take effect before transitioning opacity
+      }
+      
+      // Function to close the popup
+      function closePopup() {
+          document.getElementById("myPopup").style.opacity = "0";
+          setTimeout(function() {
+              document.getElementById("myPopup").style.display = "none";
+          }, 300); // Match the transition duration
+      }
+      
+      // Close the popup when clicking outside of it
+      window.onclick = function(event) {
+          var popup = document.getElementById("myPopup");
+          if (event.target == popup) {
+              closePopup();
+          }
+      }
+      </script>
+    </div>
+  </body>
+</html>
